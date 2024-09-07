@@ -1,0 +1,16 @@
+<configuration>
+    <!-- Defining the output pattern for logs -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Setting the root logger level to INFO -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- Setting the AWS SDK logger level to WARN -->
+    <logger name="software.amazon.awssdk" level="WARN" />
+</configuration>
